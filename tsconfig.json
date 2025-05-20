@@ -30,6 +30,6 @@
     "app/components/AboutSection.jsx",
     "app/components/AboutSection.jsx",
     "tailwind.config.js"
-, "app/components/AchievementsSection.jsx"  ],
+, "app/components/AchievementsSection.jsx", "app/components/EmailSection.jsx"  ],
   "exclude": ["node_modules"]
 }

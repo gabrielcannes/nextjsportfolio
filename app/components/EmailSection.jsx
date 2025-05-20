@@ -5,7 +5,7 @@ import GithubIcon from "../../public/github.svg";
 import LinkedInIcon from "../../public/linkedin.png";
 
 export const EmailSection = () => {
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
       email: e.target.email.value,
