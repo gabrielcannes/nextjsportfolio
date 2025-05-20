@@ -74,7 +74,7 @@ export const ProjectSection = () => {
       <h2 className="text-center text-4xl font-bold text-[#F3EFE7] mt-4 mb-10">
         Projetos nos quais trabalhei
       </h2>
-      <div className="text-[#F3EFE7] flex flex-row justify-center gap-2 py-6">
+      <div className="text-[#F3EFE7] grid grid-cols-2 sm:flex sm:flex-row justify-center gap-2 py-6">
         <ProjectTag
           name="Todos"
           onClick={() => handleTagChange("All")}
