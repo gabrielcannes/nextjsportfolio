@@ -7,22 +7,22 @@ const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
 
 const achievementsList = [
   {
-    metric: "Projetos",
+    metric: "Projects",
     value: "5",
     postFix: "+",
   },
   {
-    metric: "Impacto",
+    metric: "Impact",
     value: "30",
     postFix: "s",
   },
   {
-    metric: "Cursos",
+    metric: "Courses",
     value: "10",
     postFix: "+",
   },
   {
-    metric: "Anos",
+    metric: "Years",
     value: "5",
     postFix: "+",
   },
@@ -43,7 +43,7 @@ export const AchievementsSection = () => {
                 <AnimatedNumbers
                   includeComma
                   animateToNumber={parseInt(a.value)}
-                  locale="pt-BR"
+                  locale="en-US"
                   className="text-white text-4xl font-bold"
                   configs={(_, index) => ({
                     mass: 1,
