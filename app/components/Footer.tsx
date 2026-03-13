@@ -10,7 +10,7 @@ export const Footer = () => {
           alt="logo"
           src={"/images/logo.png"}
         ></Image>
-        <p className="text-slate-600">Todos os direitos reservados.</p>
+        <p className="text-slate-600">All rights reserved.</p>
       </div>
     </footer>
   );
