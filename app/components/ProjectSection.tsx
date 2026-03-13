@@ -72,7 +72,7 @@ export const ProjectSection = () => {
   return (
     <section id="projects">
       <h2 className="text-center text-4xl font-bold text-[#F3EFE7] mt-4 mb-10">
-        Projects I've Worked On
+        Projects I&apos;ve Worked On
       </h2>
 
       <div className="text-[#F3EFE7] grid grid-cols-2 sm:flex sm:flex-row justify-center gap-2 py-6">
