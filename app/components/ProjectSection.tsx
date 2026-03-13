@@ -9,7 +9,7 @@ const projectsData = [
     id: 1,
     title: "StreetSales",
     description:
-      "Plataforma de gestão comercial focada em operações de vendas externas.",
+      "Commercial management platform focused on field sales operations.",
     image: "/images/projects/streetsales.png",
     tag: ["All", "Tech"],
     previewUrl: "https://streetsales.com.br",
@@ -18,7 +18,7 @@ const projectsData = [
     id: 2,
     title: "NBC Bank",
     description:
-      "Sistema financeiro interno com recursos de auditoria e automação de processos.",
+      "Internal financial system with auditing tools and process automation.",
     image: "/images/projects/nbcbank.png",
     tag: ["All", "Finance"],
     previewUrl: "https://nbcbank.com.br",
@@ -27,7 +27,7 @@ const projectsData = [
     id: 3,
     title: "PROCER",
     description:
-      "Soluções digitais para agronegócio com foco em escalabilidade e performance.",
+      "Digital solutions for agribusiness focused on scalability and performance.",
     image: "/images/projects/domy.png",
     tag: ["All", "Agro"],
     previewUrl: "https://www.procer.com.br",
@@ -35,7 +35,7 @@ const projectsData = [
   {
     id: 4,
     title: "Banrisul (Vero)",
-    description: "App mobile-first para onboarding de novos clientes PJ.",
+    description: "Mobile-first onboarding app for new business clients.",
     image: "/images/projects/banrisul.png",
     tag: ["All", "Finance"],
     previewUrl: "https://sejavero.com.br/bod/link/home.html",
@@ -44,7 +44,7 @@ const projectsData = [
     id: 5,
     title: "Domy Tech",
     description:
-      "Soluções digitais para qualquer negócio com foco em escalabilidade e performance.",
+      "Digital solutions for businesses with a focus on scalability and performance.",
     image: "/images/projects/domytech.png",
     tag: ["All", "Tech"],
     previewUrl: "https://domy.tec.br",
@@ -56,7 +56,7 @@ export const ProjectSection = () => {
   const isInView = useInView(ref, { once: false });
   const [tag, setTag] = useState("All");
 
-  const handleTagChange = (newTag: string) => {
+  const handleTagChange = (newTag) => {
     setTag(newTag);
   };
 
@@ -72,16 +72,17 @@ export const ProjectSection = () => {
   return (
     <section id="projects">
       <h2 className="text-center text-4xl font-bold text-[#F3EFE7] mt-4 mb-10">
-        Projetos nos quais trabalhei
+        Projects I've Worked On
       </h2>
+
       <div className="text-[#F3EFE7] grid grid-cols-2 sm:flex sm:flex-row justify-center gap-2 py-6">
         <ProjectTag
-          name="Todos"
+          name="All"
           onClick={() => handleTagChange("All")}
           isSelected={tag === "All"}
         />
         <ProjectTag
-          name="Financeiro"
+          name="Finance"
           onClick={() => handleTagChange("Finance")}
           isSelected={tag === "Finance"}
         />
@@ -96,6 +97,7 @@ export const ProjectSection = () => {
           isSelected={tag === "Tech"}
         />
       </div>
+
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((projectData, index) => (
           <motion.li
