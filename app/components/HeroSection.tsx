@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
-const baixarCV = () => {
+const downloadCV = () => {
   const link = document.createElement("a");
-  link.href = "/assets/curriculo.pdf";
-  link.download = "curriculo.pdf";
+  link.href = "/assets/resume.pdf";
+  link.download = "resume.pdf";
   link.click();
 };
 
-const linkContratar = () => {
+const hireMe = () => {
   window.location.href = "https://wa.link/769rm9";
 };
 
@@ -26,18 +26,18 @@ export const HeroSection = () => {
         >
           <h1 className="text-[#EDE6D3] mb-4 lg:text-8xl lg:leading-normal sm:text-4xl text-4xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9A6F56] to-[#C2A48C]">
-              Olá, eu sou{" "}
+              Hello, I'm{" "}
             </span>
             <br />
             <TypeAnimation
               sequence={[
                 "Gabriel",
                 2000,
-                "Dev Web",
+                "Web Developer",
                 2000,
-                "Dev Mobile",
+                "Mobile Developer",
                 2000,
-                "Professor",
+                "Instructor",
                 2000,
               ]}
               wrapper="span"
@@ -46,22 +46,22 @@ export const HeroSection = () => {
             />
           </h1>
           <p className="text-[#C2A48C] lg:text-xl sm:text-lg md:mr-5 mb-6 text-base">
-            Desenvolvedor Front-End com mais de 5 anos de experiência criando
-            aplicações web de alta performance usando Angular, React e ferramentas modernas de UI.
+            Front-End Developer with over 5 years of experience building
+            high-performance web applications using Angular, React, and modern UI tools.
           </p>
           <div>
             <button
-              onClick={linkContratar}
+              onClick={hireMe}
               className="cursor-pointer px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-[#735B4B] via-[#9A6F56] to-[#C2A48C] hover:brightness-110 text-white sm:w-fit w-full"
             >
-              Contrate-me
+              Hire Me
             </button>
             <button className="cursor-pointer px-1 py-1 rounded-full bg-gradient-to-br from-[#735B4B] via-[#9A6F56] to-[#C2A48C] hover:brightness-110 text-white mt-3 sm:w-fit w-full">
               <span
-                onClick={baixarCV}
+                onClick={downloadCV}
                 className="block bg-[#121212] hover:bg-[#1E1E1E] rounded-full px-5 py-2"
               >
-                Baixar CV
+                Download CV
               </span>
             </button>
           </div>
