@@ -13,7 +13,7 @@ export const EmailSection = () => {
       message: e.target.message.value,
     };
 
-    const mailto = `mailto:gabrielcannes.gc@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(`De: ${data.email}\n\n${data.message}`)}`;
+    const mailto = `mailto:gabrielcannes.gc@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(`From: ${data.email}\n\n${data.message}`)}`;
     window.location.href = mailto;
   };
 
@@ -21,10 +21,9 @@ export const EmailSection = () => {
     <section id="contact" className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">Vamos Conectar</h5>
+        <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          Estou buscando novas oportunidades, minha caixa de entrada está sempre aberta.
-          Seja para tirar dúvidas ou apenas para dizer oi, farei o possível para responder!
+          I'm available for freelance and contract work. If you have a project in mind, feel free to reach out. My inbox is always open and I’ll do my best to respond quickly.
         </p>
         <div className="socials flex flex-row gap-2">
           <Link
@@ -35,7 +34,7 @@ export const EmailSection = () => {
               width={30}
               height={30}
               src={GithubIcon}
-              alt={"Ícone Github"}
+              alt={"Github Icon"}
             />
           </Link>
           <Link
@@ -48,7 +47,7 @@ export const EmailSection = () => {
               width={30}
               height={30}
               src={LinkedInIcon}
-              alt={"Ícone LinkedIn"}
+              alt={"LinkedIn Icon"}
             />
           </Link>
         </div>
@@ -59,7 +58,7 @@ export const EmailSection = () => {
             htmlFor="email"
             className="text-white block text-sm font-medium mb-2"
           >
-            Seu e-mail
+            Your email
           </label>
           <input
             name="email"
@@ -67,7 +66,7 @@ export const EmailSection = () => {
             type="email"
             required
             className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block p-2.5"
-            placeholder="seuemail@exemplo.com"
+            placeholder="your@email.com"
           />
         </div>
 
@@ -76,7 +75,7 @@ export const EmailSection = () => {
             htmlFor="subject"
             className="text-white block mb-2 text-sm font-medium "
           >
-            Assunto
+            Subject
           </label>
           <input
             name="subject"
@@ -84,7 +83,7 @@ export const EmailSection = () => {
             type="text"
             required
             className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block p-2.5"
-            placeholder="Apenas dizendo oi!"
+            placeholder="Just saying hi!"
           />
         </div>
 
@@ -93,7 +92,7 @@ export const EmailSection = () => {
             htmlFor="message"
             className="text-white block text-sm mb-2 font-medium"
           >
-            Mensagem
+            Message
           </label>
           <textarea
             name="message"
@@ -101,14 +100,14 @@ export const EmailSection = () => {
             rows={4}
             required
             className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block p-2.5"
-            placeholder="Oi, estou interessado em..."
+            placeholder="Hi, I'm interested in..."
           ></textarea>
         </div>
         <button
           type="submit"
           className="w-full text-white bg-[#C2A48C] hover:bg-[#9A6F56] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center cursor-pointer"
         >
-          Enviar mensagem
+          Send Message
         </button>
       </form>
     </section>
