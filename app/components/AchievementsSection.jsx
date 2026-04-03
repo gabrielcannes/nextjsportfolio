@@ -1,34 +1,16 @@
 "use client";
 import dynamic from "next/dynamic";
+import { useLanguage } from "../../context/languageContext";
+
+
 
 const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
   ssr: false,
 });
 
-const achievementsList = [
-  {
-    metric: "Projects",
-    value: "5",
-    postFix: "+",
-  },
-  {
-    metric: "Impact",
-    value: "30",
-    postFix: "s",
-  },
-  {
-    metric: "Courses",
-    value: "10",
-    postFix: "+",
-  },
-  {
-    metric: "Years",
-    value: "5",
-    postFix: "+",
-  },
-];
-
 export const AchievementsSection = () => {
+  const { t } = useLanguage();
+  const achievementsList = t.achievements
   return (
     <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 ">
       <div className="border-[#33353F] border rounded-md py-8 md:px-16 flex flex-wrap justify-center gap-6 sm:justify-between">

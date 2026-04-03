@@ -2,19 +2,27 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
-
-const downloadCV = () => {
-  const link = document.createElement("a");
-  link.href = "/assets/resume.pdf";
-  link.download = "resume.pdf";
-  link.click();
-};
-
-const hireMe = () => {
-  window.location.href = "https://wa.link/769rm9";
-};
+import { useLanguage } from "../../context/languageContext";
 
 export const HeroSection = () => {
+  const { t, language } = useLanguage();
+
+  // Movido para dentro do componente para acessar o 'language'
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    
+    // Lógica para selecionar o arquivo correto
+    const cvFile = language === "en" ? "cvEN.pdf" : "cvPT.pdf";
+    
+    link.href = `/assets/${cvFile}`;
+    link.download = cvFile;
+    link.click();
+  };
+
+  const hireMe = () => {
+    window.location.href = "https://wa.link/769rm9";
+  };
+
   return (
     <section className="lg:py-16 bg-[#18120F]">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -26,18 +34,19 @@ export const HeroSection = () => {
         >
           <h1 className="text-[#EDE6D3] mb-4 lg:text-8xl lg:leading-normal sm:text-4xl text-4xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9A6F56] to-[#C2A48C]">
-              Hello, I&apos;m{" "}
+              {t.hero.greeting}{" "}
             </span>
             <br />
             <TypeAnimation
+              key={language}
               sequence={[
-                "Gabriel",
+                t.hero.name,
                 2000,
-                "Web Developer",
+                t.hero.webDev,
                 2000,
-                "Mobile Developer",
+                t.hero.mobileDev,
                 2000,
-                "Instructor",
+                t.hero.mentor,
                 2000,
               ]}
               wrapper="span"
@@ -46,26 +55,26 @@ export const HeroSection = () => {
             />
           </h1>
           <p className="text-[#C2A48C] lg:text-xl sm:text-lg md:mr-5 mb-6 text-base">
-            Front-End Developer with over 5 years of experience building
-            high-performance web applications using Angular, React, and modern UI tools.
+            {t.hero.description}
           </p>
           <div>
             <button
               onClick={hireMe}
               className="cursor-pointer px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-[#735B4B] via-[#9A6F56] to-[#C2A48C] hover:brightness-110 text-white sm:w-fit w-full"
             >
-              Hire Me
+              {t.hero.hireMe}
             </button>
-            <button className="cursor-pointer px-1 py-1 rounded-full bg-gradient-to-br from-[#735B4B] via-[#9A6F56] to-[#C2A48C] hover:brightness-110 text-white mt-3 sm:w-fit w-full">
-              <span
-                onClick={downloadCV}
-                className="block bg-[#121212] hover:bg-[#1E1E1E] rounded-full px-5 py-2"
-              >
-                Download CV
+            <button 
+              onClick={handleDownloadCV} // Clique agora no botão pai ou no span
+              className="cursor-pointer px-1 py-1 rounded-full bg-gradient-to-br from-[#735B4B] via-[#9A6F56] to-[#C2A48C] hover:brightness-110 text-white mt-3 sm:w-fit w-full"
+            >
+              <span className="block bg-[#121212] hover:bg-[#1E1E1E] rounded-full px-5 py-2">
+                {t.hero.downloadCv}
               </span>
             </button>
           </div>
         </motion.div>
+        
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
