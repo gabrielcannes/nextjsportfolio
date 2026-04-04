@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Gabriel Cannes | Full Stack Developer Portfolio
 
-## Getting Started
+Este é o repositório do meu portfólio pessoal, desenvolvido com o objetivo de centralizar meus projetos, experiências e habilidades técnicas. O site foi construído focando em **performance**, **interatividade** e **acessibilidade global**.
 
-First, run the development server:
+## 🌐 [Visualize o Projeto Ao Vivo](https://seu-link-da-vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Diferenciais deste Projeto
+
+* **i18n (Internationalization):** Implementação de sistema bilíngue (PT-BR / EN) utilizando **React Context API** para persistência de estado e troca dinâmica de textos sem refresh.
+* **Asset Logic:** Lógica inteligente para download de currículos específicos (PDF) baseada no idioma selecionado pelo usuário no momento do clique.
+* **UI/UX Moderna:** Interface responsiva com animações fluidas utilizando **Framer Motion** e efeito de escrita dinâmica com **React Type Animation**.
+* **Performance:** Desenvolvido com **Next.js (App Router)** para garantir carregamento otimizado, aproveitando componentes de servidor e cliente de forma equilibrada.
+
+## 🛠️ Tech Stack
+
+* **Framework:** [Next.js 14+](https://nextjs.org/)
+* **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+* **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
+* **Animações:** [Framer Motion](https://www.framer.com/motion/)
+* **Ícones:** [Heroicons](https://heroicons.com/)
+
+## 📂 Estrutura de Pastas Principal
+
+```text
+├── app/                  # Rotas e páginas (App Router)
+│   ├── components/       # Componentes modulares (Hero, Navbar, ProjectCard, etc.)
+│   ├── constants/        # Dicionários de tradução (PT/EN)
+│   └── layout.tsx        # Layout global e fontes
+├── context/              # Context API para gerenciamento de idioma (useLanguage)
+├── public/               # Ativos estáticos (Imagens, Logos e CVs)
+└── tailwind.config.ts    # Configurações de design system e cores personalizadas
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Como rodar localmente
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Siga os passos abaixo para configurar o ambiente de desenvolvimento em sua máquina:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/gabrielcannes/seu-repositorio.git](https://github.com/gabrielcannes/seu-repositorio.git)
+    ```
 
-## Learn More
+2. **Instale as dependências:**
+   ```bash
+   npm install
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Acesse o projeto::**
+   Abra http://localhost:3000 no seu navegador para ver o resultado.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 📄 Currículo Dinâmico
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+O projeto conta com uma lógica inteligente de **Asset Management**. O download do currículo é adaptado automaticamente com base no idioma selecionado na interface, garantindo que o recrutador sempre receba a versão correta:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> **Lógica de Seleção:**
+> * 🇬🇧 **Site em Inglês:** Realiza o download do arquivo `cvEN.pdf`.
+> * 🇧🇷 **Site em Português:** Realiza o download do arquivo `cvPT.pdf`.
+
+---
+
+## 📫 Contato
+
+Fique à vontade para entrar em contato para oportunidades, parcerias ou apenas para trocar uma ideia sobre tecnologia!
+
+| Canal | Link |
+| :--- | :--- |
+| 💼 **LinkedIn** | [Gabriel Coelho Cannes](https://www.linkedin.com/in/gabriel-coelho-cannes-406a84140/) |
+| 💻 **GitHub** | [github.com/gabrielcannes](https://github.com/gabrielcannes) |
+| 📧 **Email** | [gabrielcannes.gc@gmail.com](mailto:gabrielcannes.gc@gmail.com) |
+| 💬 **WhatsApp** | [Entre em contato](https://wa.link/769rm9) |
+
+---
+
+<p align="center">
+  Developed with ☕ and <strong>React</strong>
+</p>
