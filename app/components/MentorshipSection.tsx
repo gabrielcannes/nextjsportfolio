@@ -29,7 +29,7 @@ export const MentorshipSection = () => {
 
         <div className="mt-12 flex justify-center">
           <a 
-            href="https://wa.me/51998491213" 
+            href="https://wa.link/wipd5v" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg"
