@@ -4,6 +4,7 @@ import { AchievementsSection } from "./components/AchievementsSection";
 import { EmailSection } from "./components/EmailSection";
 import { Footer } from "./components/Footer";
 import { HeroSection } from "./components/HeroSection";
+import { MentorshipSection } from "./components/MentorshipSection"; // 1. Importe aqui
 import { Navbar } from "./components/Navbar";
 import { ProjectSection } from "./components/ProjectSection";
 
@@ -16,6 +17,7 @@ export default function Home() {
           <HeroSection />
           <AchievementsSection />
           <AboutSection />
+          <MentorshipSection /> 
           <ProjectSection />
           <EmailSection />
         </div>
