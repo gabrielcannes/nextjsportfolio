@@ -23,7 +23,7 @@ export const translations = {
     ],
     about: {
       title: "About Me",
-      description: "I am a Full Stack Developer with strong specialization in Front-End, working since 2019 at large companies such as NBC Bank, Dell, Banrisul, and Domy. Throughout my career, I have gained experience in strategic and global projects, developing robust, scalable systems with a strong focus on user experience.",
+      description: "I am a Full Stack Developer with strong specialization in Front-End, working since 2019 at large companies such as Banrisul, Dell and HP. Throughout my career, I have gained experience in strategic and global projects, developing robust, scalable systems with a strong focus on user experience.",
       skills: "Skills",
       education: "Education",
       experience: "Experience",
@@ -154,7 +154,7 @@ export const translations = {
     ],
     about: {
       title: "Sobre Mim",
-      description: "Sou um Desenvolvedor Full Stack com forte especialização em Front-End, atuando desde 2019 em grandes empresas como NBC Bank, Dell, Banrisul e Domy. Ao longo da minha carreira, ganhei experiência em projetos estratégicos e globais, desenvolvendo sistemas robustos e escaláveis com foco intenso na experiência do usuário.",
+      description: "Sou um Desenvolvedor Full Stack com forte especialização em Front-End, atuando desde 2019 em grandes empresas como Dell, Banrisul e HP. Ao longo da minha carreira, ganhei experiência em projetos estratégicos e globais, desenvolvendo sistemas robustos e escaláveis com foco intenso na experiência do usuário.",
       skills: "Habilidades",
       education: "Formação",
       experience: "Experiência",
